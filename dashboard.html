@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - EduScheduler</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>📚 EduScheduler</h2>
+                <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul id="sidebarMenu">
+                    <!-- Menu akan diisi oleh JavaScript berdasarkan role -->
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="user-info" id="userInfo">
+                    <!-- Info user akan diisi JavaScript -->
+                </div>
+                <button class="btn btn-secondary" id="logoutBtn">Keluar</button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-dashboard">
+            <!-- Header -->
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <h1 id="pageTitle">Dashboard</h1>
+                    <p id="pageSubtitle">Selamat datang di sistem penjadwalan ujian</p>
+                </div>
+                <div class="header-right">
+                    <div class="header-stats" id="headerStats">
+                        <!-- Stats akan diisi JavaScript -->
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="content-area" id="contentArea">
+                <!-- Dashboard Home -->
+                <section class="content-section active" id="home">
+                    <div class="stats-grid" id="statsGrid">
+                        <!-- Stats cards akan diisi JavaScript -->
+                    </div>
+                    
+                    <div class="quick-actions" id="quickActions">
+                        <h3>Aksi Cepat</h3>
+                        <div class="action-buttons" id="actionButtons">
+                            <!-- Action buttons akan diisi JavaScript -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Data Management -->
+                <section class="content-section" id="dataManagement">
+                    <div class="section-header">
+                        <h2>Manajemen Data</h2>
+                        <p>Kelola data mata pelajaran, ruangan, dan siswa</p>
+                    </div>
+                    
+                    <div class="tabs">
+                        <button class="tab-btn active" data-tab="mataPelajaran">Mata Pelajaran</button>
+                        <button class="tab-btn" data-tab="ruangan">Ruangan</button>
+                        <button class="tab-btn" data-tab="siswa">Siswa</button>
+                    </div>
+                    
+                    <!-- Mata Pelajaran Tab -->
+                    <div class="tab-content active" id="mataPelajaran">
+                        <div class="data-controls">
+                            <button class="btn btn-primary" id="addMataPelajaran">+ Tambah Mata Pelajaran</button>
+                            <div class="search-box">
+                                <input type="text" placeholder="Cari mata pelajaran..." id="searchMataPelajaran">
+                            </div>
+                        </div>
+                        <div class="data-table-container">
+                            <table class="data-table" id="mataPelajaranTable">
+                                <thead>
+                                    <tr>
+                                        <th>Kode</th>
+                                        <th>Nama Mata Pelajaran</th>
+                                        <th>Durasi (Menit)</th>
+                                        <th>Tingkat</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="mataPelajaranTableBody">
+                                    <!-- Data akan diisi JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <!-- Ruangan Tab -->
+                    <div class="tab-content" id="ruangan">
+                        <div class="data-controls">
+                            <button class="btn btn-primary" id="addRuangan">+ Tambah Ruangan</button>
+                            <div class="search-box">
+                                <input type="text" placeholder="Cari ruangan..." id="searchRuangan">
+                            </div>
+                        </div>
+                        <div class="data-table-container">
+                            <table class="data-table" id="ruanganTable">
+                                <thead>
+                                    <tr>
+                                        <th>Kode Ruangan</th>
+                                        <th>Nama Ruangan</th>
+                                        <th>Kapasitas</th>
+                                        <th>Lokasi</th>
+                                        <th>Status</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ruanganTableBody">
+                                    <!-- Data akan diisi JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <!-- Siswa Tab -->
+                    <div class="tab-content" id="siswa">
+                        <div class="data-controls">
+                            <button class="btn btn-primary" id="addSiswa">+ Tambah Siswa</button>
+                            <div class="search-box">
+                                <input type="text" placeholder="Cari siswa..." id="searchSiswa">
+                            </div>
+                        </div>
+                        <div class="data-table-container">
+                            <table class="data-table" id="siswaTable">
+                                <thead>
+                                    <tr>
+                                        <th>NIS</th>
+                                        <th>Nama Siswa</th>
+                                        <th>Kelas</th>
+                                        <th>Email</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="siswaTableBody">
+                                    <!-- Data akan diisi JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Schedule Generator -->
+                <section class="content-section" id="scheduleGenerator">
+                    <div class="section-header">
+                        <h2>Generator Jadwal Ujian</h2>
+                        <p>Buat jadwal ujian otomatis dengan perhitungan kombinasi dan permutasi</p>
+                    </div>
+                    
+                    <div class="generator-container">
+                        <div class="generator-form">
+                            <h3>Parameter Penjadwalan</h3>
+                            
+                            <div class="form-grid">
+                                <div class="input-group">
+                                    <label for="startDate">Tanggal Mulai</label>
+                                    <input type="date" id="startDate" required>
+                                </div>
+                                
+                                <div class="input-group">
+                                    <label for="endDate">Tanggal Selesai</label>
+                                    <input type="date" id="endDate" required>
+                                </div>
+                                
+                                <div class="input-group">
+                                    <label for="sessionsPerDay">Sesi per Hari</label>
+                                    <select id="sessionsPerDay">
+                                        <option value="2">2 Sesi</option>
+                                        <option value="3">3 Sesi</option>
+                                        <option value="4">4 Sesi</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="input-group">
+                                    <label for="examDuration">Durasi per Sesi (Menit)</label>
+                                    <input type="number" id="examDuration" value="120" min="60" max="240">
+                                </div>
+                            </div>
+                            
+                            <div class="selected-items">
+                                <div class="selection-group">
+                                    <h4>Mata Pelajaran Terpilih</h4>
+                                    <div class="selection-list" id="selectedMataPelajaran">
+                                        <!-- Akan diisi JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="selection-group">
+                                    <h4>Ruangan Tersedia</h4>
+                                    <div class="selection-list" id="selectedRuangan">
+                                        <!-- Akan diisi JavaScript -->
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="generator-actions">
+                                <button class="btn btn-primary" id="generateSchedule">
+                                    🎯 Generate Jadwal
+                                </button>
+                                <button class="btn btn-secondary" id="resetGenerator">
+                                    🔄 Reset
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="calculation-info">
+                            <h3>Informasi Perhitungan</h3>
+                            <div class="calc-stats" id="calcStats">
+                                <div class="calc-item">
+                                    <span class="calc-label">Total Kombinasi:</span>
+                                    <span class="calc-value" id="totalCombinations">0</span>
+                                </div>
+                                <div class="calc-item">
+                                    <span class="calc-label">Total Permutasi:</span>
+                                    <span class="calc-value" id="totalPermutations">0</span>
+                                </div>
+                                <div class="calc-item">
+                                    <span class="calc-label">Kemungkinan Jadwal:</span>
+                                    <span class="calc-value" id="possibleSchedules">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Schedule View -->
+                <section class="content-section" id="scheduleView">
+                    <div class="section-header">
+                        <h2>Jadwal Ujian</h2>
+                        <p>Lihat dan kelola jadwal ujian yang telah dibuat</p>
+                    </div>
+                    
+                    <div class="schedule-controls">
+                        <div class="view-options">
+                            <button class="btn btn-outline active" data-view="table">📋 Tabel</button>
+                            <button class="btn btn-outline" data-view="calendar">📅 Kalender</button>
+                        </div>
+                        
+                        <div class="schedule-actions">
+                            <button class="btn btn-success" id="exportPDF">📄 Export PDF</button>
+                            <button class="btn btn-info" id="printSchedule">🖨️ Cetak</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Table View -->
+                    <div class="schedule-display active" id="tableView">
+                        <div class="schedule-table-container">
+                            <table class="schedule-table" id="scheduleTable">
+                                <thead>
+                                    <tr>
+                                        <th>Tanggal</th>
+                                        <th>Sesi</th>
+                                        <th>Waktu</th>
+                                        <th>Mata Pelajaran</th>
+                                        <th>Ruangan</th>
+                                        <th>Kelas</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="scheduleTableBody">
+                                    <!-- Data akan diisi JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <!-- Calendar View -->
+                    <div class="schedule-display" id="calendarView">
+                        <div class="calendar-container">
+                            <div class="calendar-header">
+                                <button class="btn btn-outline" id="prevMonth">‹</button>
+                                <h3 id="currentMonth">Januari 2024</h3>
+                                <button class="btn btn-outline" id="nextMonth">›</button>
+                            </div>
+                            <div class="calendar-grid" id="calendarGrid">
+                                <!-- Calendar akan diisi JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Student Schedule (untuk role siswa) -->
+                <section class="content-section" id="studentSchedule">
+                    <div class="section-header">
+                        <h2>Jadwal Ujian Saya</h2>
+                        <p>Lihat jadwal ujian pribadi Anda</p>
+                    </div>
+                    
+                    <div class="student-info" id="studentInfo">
+                        <!-- Info siswa akan diisi JavaScript -->
+                    </div>
+                    
+                    <div class="student-schedule-container">
+                        <div class="upcoming-exams">
+                            <h3>Ujian Mendatang</h3>
+                            <div class="exam-cards" id="upcomingExams">
+                                <!-- Cards akan diisi JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <div class="schedule-calendar">
+                            <h3>Kalender Ujian</h3>
+                            <div class="mini-calendar" id="studentCalendar">
+                                <!-- Mini calendar akan diisi JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <!-- Add/Edit Modal -->
+    <div class="modal" id="dataModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Tambah Data</h3>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="dataForm">
+                    <div id="formFields">
+                        <!-- Form fields akan diisi JavaScript -->
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="btn btn-secondary" id="cancelBtn">Batal</button>
+                        <button type="submit" class="btn btn-primary" id="saveBtn">Simpan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Memproses...</p>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <div class="notification-content">
+            <span class="notification-message"></span>
+            <button class="notification-close">&times;</button>
+        </div>
+    </div>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>

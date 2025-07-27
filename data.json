@@ -1,0 +1,186 @@
+{
+  "users": [
+    {
+      "id": "admin1",
+      "name": "Administrator",
+      "email": "admin@sekolah.com",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": "guru1",
+      "name": "Budi Santoso",
+      "email": "guru@sekolah.com",
+      "password": "guru123",
+      "role": "guru"
+    },
+    {
+      "id": "siswa1",
+      "name": "Andi Pratama",
+      "email": "siswa@sekolah.com",
+      "password": "siswa123",
+      "role": "siswa",
+      "kelas": "XII IPA 1",
+      "nis": "2021001"
+    }
+  ],
+  "mataPelajaran": [
+    {
+      "id": "mp1",
+      "kode": "MAT",
+      "nama": "Matematika",
+      "durasi": 120,
+      "tingkat": "XII IPA"
+    },
+    {
+      "id": "mp2",
+      "kode": "FIS",
+      "nama": "Fisika",
+      "durasi": 120,
+      "tingkat": "XII IPA"
+    },
+    {
+      "id": "mp3",
+      "kode": "KIM",
+      "nama": "Kimia",
+      "durasi": 120,
+      "tingkat": "XII IPA"
+    },
+    {
+      "id": "mp4",
+      "kode": "BIO",
+      "nama": "Biologi",
+      "durasi": 120,
+      "tingkat": "XII IPA"
+    },
+    {
+      "id": "mp5",
+      "kode": "ING",
+      "nama": "Bahasa Inggris",
+      "durasi": 120,
+      "tingkat": "XII"
+    },
+    {
+      "id": "mp6",
+      "kode": "IND",
+      "nama": "Bahasa Indonesia",
+      "durasi": 120,
+      "tingkat": "XII"
+    }
+  ],
+  "ruangan": [
+    {
+      "id": "r1",
+      "kode": "R001",
+      "nama": "Ruang Kelas A",
+      "kapasitas": 30,
+      "lokasi": "Lantai 1",
+      "status": "aktif"
+    },
+    {
+      "id": "r2",
+      "kode": "R002",
+      "nama": "Ruang Kelas B",
+      "kapasitas": 30,
+      "lokasi": "Lantai 1",
+      "status": "aktif"
+    },
+    {
+      "id": "r3",
+      "kode": "R003",
+      "nama": "Ruang Kelas C",
+      "kapasitas": 35,
+      "lokasi": "Lantai 2",
+      "status": "aktif"
+    },
+    {
+      "id": "r4",
+      "kode": "LAB1",
+      "nama": "Laboratorium IPA",
+      "kapasitas": 25,
+      "lokasi": "Lantai 2",
+      "status": "aktif"
+    },
+    {
+      "id": "r5",
+      "kode": "R004",
+      "nama": "Ruang Kelas D",
+      "kapasitas": 32,
+      "lokasi": "Lantai 2",
+      "status": "maintenance"
+    }
+  ],
+  "siswa": [
+    {
+      "id": "siswa1",
+      "nis": "2021001",
+      "nama": "Andi Pratama",
+      "kelas": "XII IPA 1",
+      "email": "siswa@sekolah.com"
+    },
+    {
+      "id": "s1",
+      "nis": "2021002",
+      "nama": "Budi Setiawan",
+      "kelas": "XII IPA 1",
+      "email": "budi@sekolah.com"
+    },
+    {
+      "id": "s2",
+      "nis": "2021003",
+      "nama": "Citra Dewi",
+      "kelas": "XII IPA 1",
+      "email": "citra@sekolah.com"
+    },
+    {
+      "id": "s3",
+      "nis": "2021004",
+      "nama": "Dani Kurniawan",
+      "kelas": "XII IPA 2",
+      "email": "dani@sekolah.com"
+    },
+    {
+      "id": "s4",
+      "nis": "2021005",
+      "nama": "Eka Sari",
+      "kelas": "XII IPA 2",
+      "email": "eka@sekolah.com"
+    },
+    {
+      "id": "s5",
+      "nis": "2021006",
+      "nama": "Fajar Ramadhan",
+      "kelas": "XII IPA 1",
+      "email": "fajar@sekolah.com"
+    },
+    {
+      "id": "s6",
+      "nis": "2021007",
+      "nama": "Gita Permata",
+      "kelas": "XII IPA 2",
+      "email": "gita@sekolah.com"
+    },
+    {
+      "id": "s7",
+      "nis": "2021008",
+      "nama": "Hendra Wijaya",
+      "kelas": "XII IPA 1",
+      "email": "hendra@sekolah.com"
+    },
+    {
+      "id": "s8",
+      "nis": "2021009",
+      "nama": "Indira Sari",
+      "kelas": "XII IPA 2",
+      "email": "indira@sekolah.com"
+    },
+    {
+      "id": "s9",
+      "nis": "2021010",
+      "nama": "Joko Susilo",
+      "kelas": "XII IPA 1",
+      "email": "joko@sekolah.com"
+    }
+  ],
+  "jadwal": []
+}
