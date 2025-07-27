@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Penjadwalan Ujian - Login</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <h1>📚 EduScheduler</h1>
+                <p>Sistem Penjadwalan Ujian Cerdas</p>
+            </div>
+        </header>
+
+        <!-- Login/Register Section -->
+        <main class="main-content">
+            <div class="auth-container" id="authContainer">
+                <!-- Login Form -->
+                <div class="auth-form active" id="loginForm">
+                    <div class="form-header">
+                        <h2>Masuk ke Akun</h2>
+                        <p>Silakan masuk dengan akun Anda</p>
+                    </div>
+                    
+                    <form id="loginFormElement">
+                        <div class="input-group">
+                            <label for="loginEmail">Email</label>
+                            <input type="email" id="loginEmail" name="email" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" name="password" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="loginRole">Peran</label>
+                            <select id="loginRole" name="role" required>
+                                <option value="">Pilih Peran</option>
+                                <option value="admin">Admin</option>
+                                <option value="guru">Guru/Panitia Ujian</option>
+                                <option value="siswa">Siswa</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <span>Masuk</span>
+                            <div class="btn-loader"></div>
+                        </button>
+                    </form>
+                    
+                    <div class="auth-switch">
+                        <p>Belum punya akun? <a href="#" id="showRegister">Daftar di sini</a></p>
+                    </div>
+                </div>
+
+                <!-- Register Form -->
+                <div class="auth-form" id="registerForm">
+                    <div class="form-header">
+                        <h2>Buat Akun Baru</h2>
+                        <p>Daftar untuk menggunakan sistem</p>
+                    </div>
+                    
+                    <form id="registerFormElement">
+                        <div class="input-group">
+                            <label for="registerName">Nama Lengkap</label>
+                            <input type="text" id="registerName" name="name" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="registerEmail">Email</label>
+                            <input type="email" id="registerEmail" name="email" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="registerPassword">Password</label>
+                            <input type="password" id="registerPassword" name="password" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="registerRole">Peran</label>
+                            <select id="registerRole" name="role" required>
+                                <option value="">Pilih Peran</option>
+                                <option value="admin">Admin</option>
+                                <option value="guru">Guru/Panitia Ujian</option>
+                                <option value="siswa">Siswa</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-group" id="kelasGroup" style="display: none;">
+                            <label for="registerKelas">Kelas</label>
+                            <input type="text" id="registerKelas" name="kelas" placeholder="Contoh: XII IPA 1">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <span>Daftar</span>
+                            <div class="btn-loader"></div>
+                        </button>
+                    </form>
+                    
+                    <div class="auth-switch">
+                        <p>Sudah punya akun? <a href="#" id="showLogin">Masuk di sini</a></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 EduScheduler - Sistem Penjadwalan Ujian dengan Kombinasi & Permutasi</p>
+        </footer>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Memproses...</p>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <div class="notification-content">
+            <span class="notification-message"></span>
+            <button class="notification-close">&times;</button>
+        </div>
+    </div>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>
